@@ -38,9 +38,8 @@
     margin: 2rem;
   
 }
-#container .tabs ul li:hover{
-    border-bottom: 1px solid orangered;
-}
+
+
 #container .checkout{
     margin: 2rem;
     display: flex;
@@ -59,16 +58,15 @@
     #container .tabs{
         display: flex;
         flex-direction: column;
-   
-    }
+        
+    };
     
     #container .tabs ul{
         margin-left: -10px;
         margin-top: 0px;
-        
-        
-       
     }
+    
+   
     #container .checkout{
         display: flex;
        margin:0px;
@@ -83,6 +81,7 @@
     #container .logo h1{
         visibility: hidden;
     }
+
    
    
 } 

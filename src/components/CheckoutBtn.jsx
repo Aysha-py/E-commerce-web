@@ -28,7 +28,7 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg}) => {
       <h3 style={{display:"inline", color:"white", width:"100px"}}>Add To Cart</h3>
 
     </div>
-    <form>
+    <form className='for'>
     
       {show===true&& <div className='checkoutzz'>
         <h2>Cart</h2>
