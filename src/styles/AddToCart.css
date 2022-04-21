@@ -1,0 +1,32 @@
+.Addcart{
+    display: flex;
+}
+
+.itemcart h4{
+    display:inline;
+    margin-left: 1em;
+    cursor: pointer;
+  
+}
+.itemcart{
+    background-color:orange;
+    border: none;
+    border-radius: 0.3em; 
+    width: 30%; 
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    top: -10px;
+
+}
+@media only screen and (max-width: 600px){
+    .Addcart{
+        display: grid; 
+        
+    }
+    .itemcart{
+     display: block;
+     top: 10px;
+     width: 70%;
+    }
+}

@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Collection from './pages/Collection';
+import Womencollection from './pages/Womencollection'
+import Mencollection from './pages/Mencollection'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Header />}  exact/>
+        <Route path="/collection" element={<Collection/>}/>
+        <Route path="/men" element={<Mencollection/>}/>
+        <Route path="/women" element={<Womencollection/>}/>
+      </Routes>
+      
+      
+    </Router>
+    
   );
 }
 

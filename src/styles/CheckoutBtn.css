@@ -1,0 +1,14 @@
+.checkoutzz{
+border: 1px solid black;
+position: absolute;
+top:93px;
+padding: 10px;
+
+border-radius: 10px;
+}
+.checkoutzz h2{
+    border-bottom: 1px solid;
+}
+.checkout-details{
+    display: flex;
+}
