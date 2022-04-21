@@ -6,9 +6,6 @@ import {FaBars} from 'react-icons/fa';
 import {FaRegWindowClose} from 'react-icons/fa';
 import Mencollection from '../pages/Mencollection'
 import Womencollection from '../pages/Womencollection'
-import CheckoutModal from "./CheckoutModal";
-
-
 
 
 const Header =()=>{

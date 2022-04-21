@@ -46,4 +46,16 @@ input:focus {
     .discount{
         display: flex;
     }
+    .addbtn{
+        display: flex;
+        flex-direction: column;
+    }
+    .add{
+        display: flex;
+    }
+    #discountprice .checkout{
+        width: 100%;
+    }
+  
+ 
 }

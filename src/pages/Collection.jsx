@@ -5,9 +5,6 @@ import image2 from "../assets/img/image2.jpg"
 import image3 from "../assets/img/image3.jpg"
 import image4 from "../assets/img/image4.jpg"
 import DiscountPrice from '../components/DiscountPrice'
-import CheckoutModal from '../components/CheckoutModal'
-
-
 
 const Collection = () => {
 
@@ -77,7 +74,7 @@ const Collection = () => {
               Featuring a durable rubber Outer sole. They will withstand everything the weather
               can offer
             </p>
-            <DiscountPrice title={title} initialimg={initialimg}/>
+            <DiscountPrice title={title} setInitialimg={setInitialimg}/>
 
         </div>
      
