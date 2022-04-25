@@ -57,7 +57,7 @@ return(
                
             
                
-                <div className ="tabs">
+                <div className ="tabs .dropdown">
                 
                     {toggle ? tabs.map((category,i)=>(
                         <ul>

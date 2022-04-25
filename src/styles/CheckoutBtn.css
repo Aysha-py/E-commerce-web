@@ -3,12 +3,17 @@ border: none;
 position: absolute;
 top:65px;
 padding: 10px;
-background-color: white;
+transition: background 1500ms ease-in;
   box-shadow: 
     12px 12px 16px 0 rgba(0, 0, 0, 0.25),
     -8px -8px 12px 0 rgba(247, 238, 238, 0.3);
 
 border-radius: 15px;
+}
+.checkoutzz:hover{
+    background:black;
+    color: white;  
+
 }
 .checkoutzz h2{
     border-bottom: 1px solid;
@@ -33,6 +38,7 @@ border-radius: 15px;
     color: white;
 }
 
+
 @media only screen and (max-width: 600px) {
     .checkoutzz{
         border: none;
@@ -41,7 +47,11 @@ border-radius: 15px;
         padding: 10px;
         width: 85%;
         right: 17px;
+        background: white;
+        color: black;
     }
+
+   
 
 }
 

@@ -30,7 +30,7 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg}) => {
     </div>
     <form className='for'>
     
-      {show===true&& <div className='checkoutzz'>
+      {show===true && count!==0 && <div className='checkoutzz'>
         <h2>Cart</h2>
       <div className='checkout-details'> 
           <img src={setInitialimg} alt="" />
@@ -45,9 +45,15 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg}) => {
       </div>
   
 </div>
-
   }
-    
+  {show===true && count===0 && <div className='checkoutzz'>
+  <h2>Cart</h2>
+    <div className='checkout-total'>
+      <h3>This cart is empty</h3>
+    </div>
+  </div>
+  }
+  
     
     </form>
         

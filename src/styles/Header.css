@@ -27,10 +27,12 @@
     display: flex;
    
 }
+
 #container .tabs button{
     border:none;
     display: none;
-    background: none;
+    background: orangered;
+    
 }
 
 #container .tabs ul{
@@ -38,6 +40,7 @@
     margin: 2rem;
   
 }
+
 
 
 #container .checkout{
@@ -58,15 +61,17 @@
     #container .tabs{
         display: flex;
         flex-direction: column;
-        
     };
     
     #container .tabs ul{
-        margin-left: -10px;
-        margin-top: 0px;
+        margin-top: 0px;   
+    }
+     #container .tabs ul{
+        margin: 20px 0px;
+        transition: 0.5s ease;
+      
     }
     
-   
     #container .checkout{
         display: flex;
        margin:0px;
@@ -77,11 +82,9 @@
         display:block;
        
     }
-   
+  
     #container .logo h1{
         visibility: hidden;
     }
-
-   
    
 } 

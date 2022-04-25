@@ -31,7 +31,9 @@ const DiscountPrice = ({title,setInitialimg}) => {
   }
   const decreament=()=>{
     setCount(count-1) 
-    setOriginalPrice(originalprice / 2)
+    if (count===0){
+      setCount(0)
+    }
   }
  
 
@@ -49,6 +51,7 @@ const DiscountPrice = ({title,setInitialimg}) => {
 
             <input  className='discountedprice' 
               value={`${percentage}%`} 
+              onChange={(e) => setPercentage(e.target.value)}
             />
         </div>
 
