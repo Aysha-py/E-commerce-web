@@ -6,11 +6,14 @@ import image3 from "../assets/img/image3.jpg"
 import image4 from "../assets/img/image4.jpg"
 import DiscountPrice from '../components/DiscountPrice'
 
-const Collection = () => {
 
+
+const Collection = ({selectedAsset}) => {
+  console.log(selectedAsset)
   const[initialimg,setInitialimg]=useState(product1)
   const[title,setTitle] =useState("FALL LIMITED SNEAKERS")
-  const[tab,setTab]=useState( 0) 
+  const[tab,setTab]=useState(0) 
+  const [modal,setModal]=useState(true)
 
   const thumbnail = [
     {
@@ -48,9 +51,9 @@ const Collection = () => {
     <>
    
     
-    <div id="product-info">
+    <div id="product-info" >
     
-        <div className='product'>
+       <div className='product' >
           <img src={initialimg} alt="product1" />
 
             <div className='xtra'>
@@ -64,8 +67,8 @@ const Collection = () => {
               
           </div>
         </div>
-      
-
+        
+        
 
         <div className='Description'>
             <h3>Sneaker Company</h3>
@@ -74,7 +77,8 @@ const Collection = () => {
               Featuring a durable rubber Outer sole. They will withstand everything the weather
               can offer
             </p>
-            <DiscountPrice title={title} setInitialimg={setInitialimg}/>
+            <DiscountPrice title={title} setInitialimg={setInitialimg} selectedAsset={selectedAsset}/>
+           
 
         </div>
      

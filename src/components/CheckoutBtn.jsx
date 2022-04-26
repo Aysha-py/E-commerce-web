@@ -1,20 +1,30 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Button from '@mui/material/Button';
+import { FaRegTrashAlt} from "react-icons/fa";
 
 
-const CheckoutBtn = ({count,discountedprice,title,setInitialimg}) => {
-    console.log(setInitialimg)
- 
+const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,setDisableToggle,selectedAsset,setSelectedAsset}) => {
+   
+   
+  console.log(selectedAsset)
+  
     const [show,setShow]= useState(false)
-
+  
     const handleShow=()=>{
       if (!show) {
-        setShow(true)  
+        setShow(true)
+        // document.getElementById('#logo-btn').setDisableToggle;  
+        document.getElementById("logo-btn").disabled = true;
       } else {
         setShow(false)  
+        document.getElementById("logo-btn").disabled = false;
       }
     
+    }
+    const deleteItem=()=>{
+      setCount(count-1)
+
     }
    
  
@@ -38,8 +48,13 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg}) => {
             <h3>{title}</h3>
           <div className='total'>
             <h3>{`$${discountedprice} X`} {count}</h3>
-            <h3>{`$${discountedprice * count}`}</h3>
+            <div className='trash'>
+              <h3>{`$${discountedprice * count}`}</h3>
+              <FaRegTrashAlt size={15} onClick={deleteItem}/>
+            </div>
+            
           </div>
+          
         </div>
         <button type='submit'>Checkout</button>
       </div>
@@ -57,9 +72,7 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg}) => {
     
     </form>
         
-    
-   
-    
+
     </>
     
   )

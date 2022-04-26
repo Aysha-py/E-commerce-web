@@ -8,16 +8,16 @@ import Mencollection from '../pages/Mencollection'
 import Womencollection from '../pages/Womencollection'
 
 
-const Header =()=>{
-
-
+const Header =({selectedAsset,setSelectedAsset})=>{
     const tabs =["collections","men","women","About","contact"]
-
     const [tab,setCurrentTab] =useState("collections")
     const [activeTab, setActiveTab] = useState(0);
     const [toggle,setToggle] =useState(false)
     const [width,setWidth] =useState(window.innerWidth)
-  
+
+
+   
+    
   const showTab=(category)=>{
     
         setCurrentTab(category)
@@ -48,13 +48,10 @@ return(
     <div>
         <div id="container">
             <div className ="Grid">
-                <div className ="logo">
-                   <button onClick={handleToggle}>{toggle? <FaRegWindowClose size={30}/>:<FaBars size={30}/>}</button>
-                   
+                <div className ="logo"  >
+                   <button id="logo-btn"  onClick={handleToggle}>{toggle? <FaRegWindowClose  size={30}/>:<FaBars size={30}/>}</button>
                       <h1 onClick={move}>Sneakers</h1> 
-                
             </div>
-               
             
                
                 <div className ="tabs .dropdown">
@@ -79,6 +76,9 @@ return(
                     
                     ))
                     }
+                   
+
+
                 </div>
             
             </div>
@@ -87,7 +87,7 @@ return(
 
             <div className="checkout">
                 <div>
-                    <FaCartArrowDown className="icon"/>
+                    <FaCartArrowDown className="icon" toggle={toggle}/>
                 </div> 
                 <div>
                     <FaUserCircle className="icon"/>
@@ -98,13 +98,12 @@ return(
             
         </div>
 
-            {tab  === "collections" && <Collection />}
-            {tab  === "men" && <Mencollection />}
+            {tab  === "collections" && <Collection selectedAsset={selectedAsset} setSelectedAsset={setSelectedAsset }/>}
+            {tab  === "men" && <Mencollection selectedAsset={selectedAsset} />}
             {tab  === "women" && <Womencollection />}
            
-
     </div>
-        
+    
                     
     )
 }

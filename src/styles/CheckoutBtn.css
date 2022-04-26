@@ -25,6 +25,14 @@ border-radius: 15px;
     display: flex;
     justify-content: space-between;
 }
+.trash h3{
+    display: inline-block;
+    margin-right: 10px;
+    
+}
+.trash{
+    cursor: pointer;
+}
 .checkout-details button{
     width: 80%;
     text-align: center;
