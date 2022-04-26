@@ -6,7 +6,7 @@ import CheckoutBtn from './CheckoutBtn';
 
 
 
-const DiscountPrice = ({title,setInitialimg,selectedAsset,setSelectedAsset}) => {
+const DiscountPrice = ({title,setInitialimg,toggle,setToggle}) => {
   
  
   const [originalprice,setOriginalPrice] = useState(50000)
@@ -59,7 +59,7 @@ const DiscountPrice = ({title,setInitialimg,selectedAsset,setSelectedAsset}) => 
 
         <div className='addbtn'>
           <div className='add'>
-              <Button startIcon={<AddIcon />} onClick={increament} count={count}></Button >
+              <Button startIcon={<AddIcon />} onClick={increament} count={count}/>
               {count <= 0 ? 0 :  <input type="text" value={count} />}
             <Button startIcon={<RemoveIcon />} onClick={decreament}></Button>
           </div>
@@ -67,7 +67,7 @@ const DiscountPrice = ({title,setInitialimg,selectedAsset,setSelectedAsset}) => 
           <div className='checkout'>
             
             <CheckoutBtn count={count} discountedprice={discountedprice} 
-            title={title} setInitialimg={setInitialimg} setCount={setCount} selectedAsset={selectedAsset} setSelectedAsset={setSelectedAsset }/>
+                title={title} setInitialimg={setInitialimg} setCount={setCount} toggle={toggle} setToggle={setToggle}/>
          
             
           </div>

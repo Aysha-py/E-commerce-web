@@ -25,6 +25,7 @@
 }
 #container .tabs{
     display: flex;
+    
    
 }
 
@@ -40,7 +41,6 @@
     margin: 2rem;
   
 }
-
 
 
 #container .checkout{
@@ -84,7 +84,7 @@
     }
   
     #container .logo h1{
-        visibility: hidden;
+        visibility:hidden;
     }
    
 } 

@@ -42,7 +42,7 @@ const Header =({selectedAsset,setSelectedAsset})=>{
     const move =()=>{
         setCurrentTab("collections")   
     }
- // <Link to="/men" style={{textDecoration:"none"}}>
+
 return(
  
     <div>
@@ -54,7 +54,7 @@ return(
             </div>
             
                
-                <div className ="tabs .dropdown">
+                <div className ="tabs" id="dropdown">
                 
                     {toggle ? tabs.map((category,i)=>(
                         <ul>
@@ -98,7 +98,7 @@ return(
             
         </div>
 
-            {tab  === "collections" && <Collection selectedAsset={selectedAsset} setSelectedAsset={setSelectedAsset }/>}
+            {tab  === "collections" && <Collection toggle={toggle} setToggle={setToggle}/>}
             {tab  === "men" && <Mencollection selectedAsset={selectedAsset} />}
             {tab  === "women" && <Womencollection />}
            

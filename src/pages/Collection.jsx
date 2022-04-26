@@ -8,8 +8,8 @@ import DiscountPrice from '../components/DiscountPrice'
 
 
 
-const Collection = ({selectedAsset}) => {
-  console.log(selectedAsset)
+const Collection = ({toggle,setToggle}) => {
+
   const[initialimg,setInitialimg]=useState(product1)
   const[title,setTitle] =useState("FALL LIMITED SNEAKERS")
   const[tab,setTab]=useState(0) 
@@ -77,7 +77,7 @@ const Collection = ({selectedAsset}) => {
               Featuring a durable rubber Outer sole. They will withstand everything the weather
               can offer
             </p>
-            <DiscountPrice title={title} setInitialimg={setInitialimg} selectedAsset={selectedAsset}/>
+            <DiscountPrice title={title} setInitialimg={setInitialimg} toggle={toggle} setToggle={setToggle} />
            
 
         </div>

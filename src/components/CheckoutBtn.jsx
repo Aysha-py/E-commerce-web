@@ -4,21 +4,22 @@ import Button from '@mui/material/Button';
 import { FaRegTrashAlt} from "react-icons/fa";
 
 
-const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,setDisableToggle,selectedAsset,setSelectedAsset}) => {
-   
-   
-  console.log(selectedAsset)
-  
+const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,setToggle}) => {
+
     const [show,setShow]= useState(false)
-  
+
+    let width = window.innerWidth
+    console.log(width)
+    
     const handleShow=()=>{
-      if (!show) {
+      if (!show && width <= 600) {
         setShow(true)
-        // document.getElementById('#logo-btn').setDisableToggle;  
-        document.getElementById("logo-btn").disabled = true;
-      } else {
-        setShow(false)  
-        document.getElementById("logo-btn").disabled = false;
+        setToggle(false)
+        document.getElementById("dropdown").style.display  = 'none';
+    
+      } 
+      else{
+       setShow(true)
       }
     
     }
@@ -26,8 +27,6 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,setDisa
       setCount(count-1)
 
     }
-   
- 
 
   return (
     <>
