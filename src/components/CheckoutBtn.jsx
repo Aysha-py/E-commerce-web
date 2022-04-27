@@ -13,18 +13,21 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
     let width = window.innerWidth
     
     const handleShow=()=>{
-        if (!show && width <= 600) {
-          setShow(true)
+        if (!show) {
+          setSPin(true)
+          setTimeout(() => {
+            setShow(true)
+            setSPin(false)
+          }, 3000)
           setToggle(false)
-          document.getElementById("dropdown").style.display  = 'none';
+          // document.getElementById("dropdown").style.display  = 'none';
         } 
         else{
-          setShow(true)
+          setShow(false)
         }
     }
 
    
-    setTimeout(handleShow,3000)
     const deleteItem=()=>{
       setCount(count-1)
 
@@ -37,6 +40,8 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
         
       <Button startIcon={<AddShoppingCartIcon size={40} onClick={handleShow}/> } ></Button >
       <h3 style={{display:"inline", color:"white", width:"100px"}}>Add To Cart</h3>
+      {spin&&<Spinner animation="grow" />}
+      
    
 
       
