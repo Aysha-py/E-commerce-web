@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns:2fr 1fr;
    border-bottom: 1px solid grey;
+   font-family: 'Roboto', sans-serif;
 }
  
 #container .Grid{
@@ -14,7 +15,8 @@
     margin-right: 2em;
 }
 #container .logo h1{
-    color:black;  
+    color:black; 
+    margin-top: 18px; 
 }
 
 #container .logo button{

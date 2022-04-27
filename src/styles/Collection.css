@@ -2,12 +2,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 6em;
+    font-family: 'Roboto', sans-serif;
 }
 
 #product-info .product{
     width: 70%;
     
 }
+
 #product-info .product img{
     width:100%;
     height:auto;

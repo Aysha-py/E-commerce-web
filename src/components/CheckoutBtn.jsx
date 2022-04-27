@@ -2,27 +2,29 @@ import React,{useState,useEffect} from 'react'
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Button from '@mui/material/Button';
 import { FaRegTrashAlt} from "react-icons/fa";
+import { Spinner } from 'react-bootstrap';
 
 
 const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,setToggle}) => {
 
     const [show,setShow]= useState(false)
+    const[spin,setSPin] =useState(false)
 
     let width = window.innerWidth
-    console.log(width)
     
     const handleShow=()=>{
-      if (!show && width <= 600) {
-        setShow(true)
-        setToggle(false)
-        document.getElementById("dropdown").style.display  = 'none';
-    
-      } 
-      else{
-       setShow(true)
-      }
-    
+        if (!show && width <= 600) {
+          setShow(true)
+          setToggle(false)
+          document.getElementById("dropdown").style.display  = 'none';
+        } 
+        else{
+          setShow(true)
+        }
     }
+
+   
+    setTimeout(handleShow,3000)
     const deleteItem=()=>{
       setCount(count-1)
 
@@ -31,10 +33,13 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
   return (
     <>
  
-    <div style={{textAlign:"center" ,marginTop:"5px" }}onClick={handleShow} >
+    <div style={{textAlign:"center" ,marginTop:"5px" }} >
         
-      <Button startIcon={<AddShoppingCartIcon size={40} /> } ></Button >
+      <Button startIcon={<AddShoppingCartIcon size={40} onClick={handleShow}/> } ></Button >
       <h3 style={{display:"inline", color:"white", width:"100px"}}>Add To Cart</h3>
+   
+
+      
 
     </div>
     <form className='for'>

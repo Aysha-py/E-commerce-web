@@ -5,6 +5,7 @@ import image2 from "../assets/img/image2.jpg"
 import image3 from "../assets/img/image3.jpg"
 import image4 from "../assets/img/image4.jpg"
 import DiscountPrice from '../components/DiscountPrice'
+import ImageCarousel from '../components/ImageCarousel'
 
 
 
@@ -13,7 +14,7 @@ const Collection = ({toggle,setToggle}) => {
   const[initialimg,setInitialimg]=useState(product1)
   const[title,setTitle] =useState("FALL LIMITED SNEAKERS")
   const[tab,setTab]=useState(0) 
-  const [modal,setModal]=useState(true)
+  const [carousel,setCarousel]=useState(false)
 
   const thumbnail = [
     {
@@ -53,9 +54,8 @@ const Collection = ({toggle,setToggle}) => {
     
     <div id="product-info" >
     
-       <div className='product' >
-          <img src={initialimg} alt="product1" />
-
+       <div className='product'>
+         <img src={initialimg} alt="product1" onClick={setCarousel}/>
             <div className='xtra'>
            {
              thumbnail.map((item,i)=>( 
@@ -77,10 +77,11 @@ const Collection = ({toggle,setToggle}) => {
               Featuring a durable rubber Outer sole. They will withstand everything the weather
               can offer
             </p>
+            
             <DiscountPrice title={title} setInitialimg={setInitialimg} toggle={toggle} setToggle={setToggle} />
            
-
-        </div>
+            </div>
+           
      
     </div>
     </>

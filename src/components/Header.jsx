@@ -101,9 +101,9 @@ return(
             {tab  === "collections" && <Collection toggle={toggle} setToggle={setToggle}/>}
             {tab  === "men" && <Mencollection selectedAsset={selectedAsset} />}
             {tab  === "women" && <Womencollection />}
-           
+            
     </div>
-    
+   
                     
     )
 }
