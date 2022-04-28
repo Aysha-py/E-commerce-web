@@ -11,7 +11,7 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
     const[spin,setSPin] =useState(false)
 
     let width = window.innerWidth
-    
+    console.log(width)
     const handleShow=()=>{
         if (!show) {
           setSPin(true)
@@ -20,18 +20,31 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
             setSPin(false)
           }, 3000)
           setToggle(false)
-          // document.getElementById("dropdown").style.display  = 'none';
-        } 
+          
+        }
+        else if(show && width<=600){
+          setToggle(true)
+          setShow(true)
+            document.getElementById("dropdown").style.display  = 'none';
+            
+            
+             
+             
+             console.log("hey")
+             
+        }
         else{
           setShow(false)
+         
         }
     }
 
-   
+  
     const deleteItem=()=>{
       setCount(count-1)
 
     }
+  
 
   return (
     <>
@@ -40,7 +53,7 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
         
       <Button startIcon={<AddShoppingCartIcon size={40} onClick={handleShow}/> } ></Button >
       <h3 style={{display:"inline", color:"white", width:"100px"}}>Add To Cart</h3>
-      {spin&&<Spinner animation="grow" />}
+      {spin&&<Spinner animation="border" />}
       
    
 
@@ -49,7 +62,7 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
     </div>
     <form className='for'>
     
-      {show===true && count!==0 && <div className='checkoutzz'>
+      {show && count!==0 && <div className='checkoutzz'>
         <h2>Cart</h2>
       <div className='checkout-details'> 
           <img src={setInitialimg} alt="" />
@@ -70,7 +83,7 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
   
 </div>
   }
-  {show===true && count===0 && <div className='checkoutzz'>
+  {show && count===0 && <div className='checkoutzz'>
   <h2>Cart</h2>
     <div className='checkout-total'>
       <h3>This cart is empty</h3>
