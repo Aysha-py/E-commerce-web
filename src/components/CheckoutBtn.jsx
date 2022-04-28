@@ -26,11 +26,7 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
           setToggle(true)
           setShow(true)
             document.getElementById("dropdown").style.display  = 'none';
-            
-            
-             
-             
-             console.log("hey")
+            console.log("hey")
              
         }
         else{
@@ -49,10 +45,10 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
   return (
     <>
  
-    <div style={{textAlign:"center" ,marginTop:"5px" }} >
+    <div  >
         
       <Button startIcon={<AddShoppingCartIcon size={40} onClick={handleShow}/> } ></Button >
-      <h3 style={{display:"inline", color:"white", width:"100px"}}>Add To Cart</h3>
+      <h3 style={{display:"inline", color:"white"}}>Add To Cart</h3>
       {spin&&<Spinner animation="border" />}
       
    
