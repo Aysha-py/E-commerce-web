@@ -1,13 +1,12 @@
 #product-info{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 5em;
     font-family: 'Roboto', sans-serif;
+    padding: 5rem;
 }
 
 #product-info .product{
     width: 50%;
-    
 }
 
 #product-info .product img{
@@ -27,19 +26,24 @@
 }
 
 #product-info .Description h1{
-    max-width: 50%;
+    max-width: 80%;
     line-height: 3rem;
+    
    
 }
 #product-info .Description p{
     max-width: 80%;
     line-height: 2rem;
+    
+}
+#product-info .Description{
+    margin-top: 20px;
 }
 @media only screen and (max-width: 600px) {
     #product-info{
         display: grid;
         grid-template-columns: 1fr;
-        padding: 10px;
+       padding: 1rem;
     }
     #product-info .product{
         width: 100%;
@@ -57,9 +61,6 @@
     }
     #product-info .Description p{
         max-width: 100%;  
-    }
-    #product-info .Description{
-        margin-top: 30px;
     }
 
 }

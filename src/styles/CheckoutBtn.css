@@ -1,29 +1,32 @@
 .checkoutzz{
 border: none;
-position: absolute;
+position:absolute;
 top:65px;
-padding: 25px;
+padding: 10px;
+right: 5px;
+
 transition: background 1500ms ease-in;
   box-shadow: 
     12px 12px 16px 0 rgba(0, 0, 0, 0.25),
     -8px -8px 12px 0 rgba(247, 238, 238, 0.3);
-
-border-radius: 15px;
+border-radius: 10px;
+z-index: 1;
 }
 .checkoutzz:hover{
     background:black;
     color: white;  
 
 }
+.checkout-total h3{
+   
+}
+.checkoutzz h2{
+    margin-top:20px;
+}
 h2,h3,h4{
     font-size: 1.2em;
 }
-.checkoutzz h2{
-    border-bottom: 1px solid;
-}
-/* .checkout-details{
-    display: flex;
-} */
+
 .total{
     display: flex;
     justify-content: space-between;
@@ -50,6 +53,12 @@ h2,h3,h4{
 Button:focus{
     outline: none !important;
 }
+#checkoutIcon{
+    text-align: center;
+    background: orangered;
+    border-radius: 10px;
+ 
+}
 
 @media only screen and (max-width: 600px) {
     .checkoutzz{
@@ -62,7 +71,9 @@ Button:focus{
         background: white;
         color: black;
     }
-
+    .count{
+    margin-left: 65px;
+    }
    
 
 }

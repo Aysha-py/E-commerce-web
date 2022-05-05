@@ -1,42 +1,39 @@
-#discountprice h4{
-    display: inline;
-    margin-left: -40px;
-    font-weight: bolder;
-    font-size: larger;
-  
-}
 #discountprice .discountedprice{
-    background-color: aqua;
-    width:30%;
+    background-color: rgb(253, 217, 204);
+    color: rgb(255, 68, 0);
     border: none;
+    width: 50px;
     border-radius: 0.3em;
     margin-bottom: 10px;
+    margin-left: -20px;
   
 }
 input:focus {
     outline: none !important;
 }
 
-#discountprice .discount {
-    display:flex;
+#discountprice .dp{
+    text-decoration:line-through;
 }
 #discountprice .addbtn{
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(230, 230, 230);
+    display: flex; 
+    margin-top: 10px;
+}
+#discountprice .addbtn .add{
+    background-color: rgb(209, 194, 194);
+    margin-right: 20px;
+    border: none;
     border-radius: 10px;
+    font-weight: bolder;
     
 }
 #discountprice .checkout{
-    background-color: orangered;
-    width: 50%;
-    
+    width: 50%; 
 }
-#discountprice .addbtn input{
-    background-color:rgb(230, 230, 230);
-    display: inline;
+#discountprice .addbtn .add input{
     width: 40px;
-    
+    font-weight: bolder;
+    background-color: rgb(209, 194, 194);
 }
 #discountprice input{
     border: none;

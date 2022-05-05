@@ -2,10 +2,29 @@
     cursor: pointer;
     display: grid;
     grid-template-columns:2fr 1fr;
-   border-bottom: 1px solid grey;
    font-family: 'Roboto', sans-serif;
 }
- 
+hr{
+    border: 0;
+    height: 1px;
+    margin-top: 0px;
+    background-color: rgb(218, 207, 207);
+}
+#dropdown li:after {
+    content: "";
+    position: absolute;
+    background-color: #c00;
+    height: 2px;
+    width: 0%;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
+    transition: .35s ease;
+}
+
+#dropdown li:hover:after {
+    width: 100%;
+}
 #container .Grid{
     display: flex;
     justify-content: space-between;
@@ -14,9 +33,11 @@
     display: flex;
     margin-right: 2em;
 }
-#container .logo h1{
-    color:black; 
-    margin-top: 18px; 
+#container .logo h2{
+    margin:auto;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 32px;
 }
 
 #container .logo button{
@@ -26,8 +47,17 @@
     display: none;
 }
 #container .tabs{
-    display: flex;
-    
+    display: flex; 
+}
+#container .tabs li{
+    width: 50px;
+    text-align: center;
+}
+#container .tabs li:hover{
+    border-bottom: 1px solid orangered;
+    transition: border 2s;
+    padding: 2px;
+    transition-timing-function: ease-out;
    
 }
 
@@ -50,7 +80,31 @@
     display: flex;
     justify-content: space-evenly;
 }
-
+.profile-photo{
+   width: 30px;
+   height: 30px;
+   border-radius: 40px;
+   border: 2px solid;
+}
+.profile-photo:hover{
+    border:2px solid orangered;
+}
+.profile-photo img{
+    width: 100%;
+    height: auto;
+}
+.count{
+   
+    font-weight: bolder;
+    width: 20px;
+    height: 20px;
+    margin-top: -35px;
+    margin-left: 20px;
+    border: 1px solid;
+    border-radius: 60px;
+    text-align: center;
+    color: orangered;
+}
 
 @media only screen and (max-width: 600px) { 
     #container{
@@ -78,14 +132,14 @@
         display: flex;
        margin:0px;
        position: relative;
-       top: 30px;
+       top: 10px;
     }
     #container .logo button{
         display:block;
        
     }
   
-    #container .logo h1{
+    #container .logo h2, hr{
         visibility:hidden;
     }
    

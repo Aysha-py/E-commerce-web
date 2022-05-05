@@ -45,9 +45,10 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
   return (
     <>
  
-    <div  >
+    <div id='checkoutIcon'>
         
-      <Button startIcon={<AddShoppingCartIcon size={40} onClick={handleShow}/> } ></Button >
+      <Button style={{color:"white",padding:"10px"}} startIcon={<AddShoppingCartIcon size={40}  onClick={handleShow}/> }></Button >
+        
       <h3 style={{display:"inline", color:"white"}}>Add To Cart</h3>
       {spin&&<Spinner animation="border" />}
       
@@ -62,12 +63,13 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
         <h2>Cart</h2>
       <div className='checkout-details'> 
           <img src={setInitialimg} alt="" />
+          
           <div className='checkout-total'>
             <h3>{title}</h3>
           <div className='total'>
             <h3>{`$${discountedprice} X`} {count}</h3>
             <div className='trash'>
-              <h3>{`$${discountedprice * count}`}</h3>
+              <h3>{`$${discountedprice * count}.`}</h3>
               <FaRegTrashAlt size={15} onClick={deleteItem}/>
             </div>
             
@@ -80,7 +82,7 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
 </div>
   }
   {show && count===0 && <div className='checkoutzz'>
-  <h2>Cart</h2>
+  <h2 >Cart</h2>
     <div className='checkout-total'>
       <h3>This cart is empty</h3>
     </div>

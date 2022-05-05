@@ -6,10 +6,11 @@ import CheckoutBtn from './CheckoutBtn';
 
 
 
+
 const DiscountPrice = ({title,setInitialimg,toggle,setToggle}) => {
   
  
-  const [originalprice,setOriginalPrice] = useState(50000)
+  const [originalprice,setOriginalPrice] = useState(250)
   const [discountedprice,setDiscountedPrice] = useState(0)
   const [percentage,setPercentage] =useState(50)
   const [count,setCount] =useState(0)
@@ -42,34 +43,31 @@ const DiscountPrice = ({title,setInitialimg,toggle,setToggle}) => {
         <div className='discount'>
           <div className='prices'>
               <input 
-                value= {`$${discountedprice}`} 
+                value= {`$${discountedprice}.00`} 
               />
-              <input 
-                value= {`$${originalprice}`} 
-              />
+              <input  className='discountedprice' 
+              value={`${percentage}`} 
+              onChange={(e) => setPercentage(e.target.value)}
+            /> <span style={{position:"relative", right:"25px" , fontSize:"20px" , color:"orangered"}}>%</span>
             </div>      
             <div className='dp'>
-                <input  className='discountedprice' 
-                value={`${percentage}`} 
-                onChange={(e) => setPercentage(e.target.value)}
-              /> <h4>%</h4>
-            </div>
+              <input 
+              value= {`$${originalprice}.00`} 
+            />
+          </div>
             
         </div>
 
         <div className='addbtn'>
           <div className='add'>
               <Button startIcon={<AddIcon />} onClick={increament} count={count}/>
-              {count <= 0 ? 0 :  <input type="text" value={count} />}
-            <Button startIcon={<RemoveIcon />} onClick={decreament}></Button>
+                {count <= 0 ? 0 :  <input type="text" value={count} />}
+              <Button startIcon={<RemoveIcon />} onClick={decreament}></Button>
           </div>
           
           <div className='checkout'>
-            
             <CheckoutBtn count={count} discountedprice={discountedprice} 
                 title={title} setInitialimg={setInitialimg} setCount={setCount} toggle={toggle} setToggle={setToggle}/>
-         
-            
           </div>
         </div>
       </div>

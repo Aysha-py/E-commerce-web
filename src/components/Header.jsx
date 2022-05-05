@@ -1,11 +1,12 @@
 import React,{useState,useEffect} from "react";
 import Collection from "../pages/Collection";
 import {FaCartArrowDown} from 'react-icons/fa';
-import {FaUserCircle} from 'react-icons/fa';
 import {FaBars} from 'react-icons/fa';
 import {FaRegWindowClose} from 'react-icons/fa';
 import Mencollection from '../pages/Mencollection'
-import Womencollection from '../pages/Womencollection'
+import Womencollection from '../pages/Womencollection';
+import avatar from "../assets/img/avatar.png"
+import cart from "../assets/img/cart.svg"
 
 
 const Header =({selectedAsset,setSelectedAsset})=>{
@@ -50,8 +51,8 @@ return(
             <div className ="Grid">
                 <div className ="logo"  >
                    <button id="logo-btn"  onClick={handleToggle}>{toggle? <FaRegWindowClose  size={30}/>:<FaBars size={30}/>}</button>
-                      <h1 onClick={move}>Sneakers</h1> 
-            </div>
+                    <h2 onClick={move}>Sneakers</h2> 
+                </div>
             
                
                 <div className ="tabs" id="dropdown">
@@ -77,26 +78,28 @@ return(
                     ))
                     }
                    
-
-
+                    
+                    
                 </div>
-            
+                
             </div>
             
 
 
             <div className="checkout">
                 <div>
-                    <FaCartArrowDown className="icon" toggle={toggle}/>
+                <img src={cart} alt="avatar" />
+                <div className="count">5</div>
                 </div> 
-                <div>
-                    <FaUserCircle className="icon"/>
+                <div className="profile-photo">
+                   <img src={avatar} alt="avatar" />
                 </div> 
                    
             </div>
             
             
         </div>
+        <hr/>
 
             {tab  === "collections" && <Collection toggle={toggle} setToggle={setToggle}/>}
             {tab  === "men" && <Mencollection selectedAsset={selectedAsset} />}
