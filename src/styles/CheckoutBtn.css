@@ -57,7 +57,6 @@ Button:focus{
     text-align: center;
     background: orangered;
     border-radius: 10px;
- 
 }
 
 @media only screen and (max-width: 600px) {
@@ -65,16 +64,19 @@ Button:focus{
         border: none;
         position: absolute;
         top:65px;
-        padding: 10px;
-        width: 85%;
         right: 17px;
-        background: white;
-        color: black;
-    }
-    .count{
-    margin-left: 65px;
     }
    
+    #checkoutIcon{
+        background-color: orangered;
+        border-radius: 10px;
+        margin-top: 1rem;
+        padding: 0.7em;
+       
+    }
+    
+  
+    
 
 }
 

@@ -48,7 +48,7 @@ const DiscountPrice = ({title,setInitialimg,toggle,setToggle}) => {
               <input  className='discountedprice' 
               value={`${percentage}`} 
               onChange={(e) => setPercentage(e.target.value)}
-            /> <span style={{position:"relative", right:"25px" , fontSize:"20px" , color:"orangered"}}>%</span>
+            /> <span style={{position:"relative", right:"25px", color:"orangered"}}>%</span>
             </div>      
             <div className='dp'>
               <input 

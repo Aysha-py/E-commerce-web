@@ -88,8 +88,8 @@ return(
 
             <div className="checkout">
                 <div>
-                <img src={cart} alt="avatar" />
-                <div className="count">5</div>
+                    <img src={cart} alt="avatar" />
+                
                 </div> 
                 <div className="profile-photo">
                    <img src={avatar} alt="avatar" />

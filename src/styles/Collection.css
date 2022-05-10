@@ -1,8 +1,11 @@
+html{
+    font-size: 16px;
+}
 #product-info{
-    display: grid;
+    display:grid;
     grid-template-columns: 1fr 1fr;
     font-family: 'Roboto', sans-serif;
-    padding: 5rem;
+    padding: 3em;
 }
 
 #product-info .product{
@@ -19,6 +22,7 @@
 
 #product-info .xtra {
     display: flex;
+    margin-top: 1rem;
 }
 #product-info .xtra-deets{
     padding: 0.5em;
@@ -26,18 +30,17 @@
 }
 
 #product-info .Description h1{
-    max-width: 80%;
+  
     line-height: 3rem;
-    
-   
+
 }
 #product-info .Description p{
-    max-width: 80%;
-    line-height: 2rem;
-    
+    font-size: 1rem;
 }
 #product-info .Description{
-    margin-top: 20px;
+    margin: auto;
+    padding-left: 8em;
+    padding-top: 1em;
 }
 @media only screen and (max-width: 600px) {
     #product-info{
@@ -61,6 +64,10 @@
     }
     #product-info .Description p{
         max-width: 100%;  
+        
+    }
+    #product-info .Description{
+        padding-left: 0; 
     }
 
 }

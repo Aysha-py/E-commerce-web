@@ -47,15 +47,10 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
  
     <div id='checkoutIcon'>
         
-      <Button style={{color:"white",padding:"10px"}} startIcon={<AddShoppingCartIcon size={40}  onClick={handleShow}/> }></Button >
+      <Button style={{color:"white"}} startIcon={<AddShoppingCartIcon size={40}  onClick={handleShow}/> }></Button >
         
-      <h3 style={{display:"inline", color:"white"}}>Add To Cart</h3>
+      <h6 style={{display:"inline", color:"white"}}>Add To Cart</h6>
       {spin&&<Spinner animation="border" />}
-      
-   
-
-      
-
     </div>
     <form className='for'>
     

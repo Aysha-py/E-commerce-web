@@ -1,11 +1,15 @@
+html{
+    font-size: 16px;
+}
 #discountprice .discountedprice{
     background-color: rgb(253, 217, 204);
     color: rgb(255, 68, 0);
     border: none;
     width: 50px;
-    border-radius: 0.3em;
-    margin-bottom: 10px;
-    margin-left: -20px;
+    border-radius:3px;
+    font-size:1rem;
+    padding: 0.2em;
+  
   
 }
 input:focus {
@@ -14,10 +18,11 @@ input:focus {
 
 #discountprice .dp{
     text-decoration:line-through;
+    margin-top: 1rem;
 }
 #discountprice .addbtn{
     display: flex; 
-    margin-top: 10px;
+    margin-top: 0.625rem;
 }
 #discountprice .addbtn .add{
     background-color: rgb(209, 194, 194);
@@ -38,20 +43,24 @@ input:focus {
 #discountprice input{
     border: none;
    font-weight: bold;
-   font-size: 1.2em;
+   font-size: 1rem;
    display: inline;
    width: 120px;
 }
 @media only screen and (max-width: 600px){
     .discount{
         display: flex;
+        justify-content: space-between;
+        
     }
     .addbtn{
         display: flex;
         flex-direction: column;
+    
     }
     .add{
         display: flex;
+        padding: 0.7em;
     }
     #discountprice .checkout{
         width: 100%;
@@ -59,6 +68,12 @@ input:focus {
     #discountprice h4{
         margin-left: -25px;
     }
+    #discountprice .discountedprice{
+        margin-left: -40px;
+        margin-top: 2px;
+    }
+    
+   
   
  
 }

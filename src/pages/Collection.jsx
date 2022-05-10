@@ -54,19 +54,19 @@ const Collection = ({toggle,setToggle,count}) => {
     
     <div id="product-info" >
     
-       <div className='product'>
-         <img src={initialimg} alt="product1" onClick={setCarousel}/>
-            <div className='xtra'>
-           {
-             thumbnail.map((item,i)=>( 
-               <div className='xtra-deets' >
-                  <img  key={i}  onClick={()=>{image(item.image);setTab(i)}} src={item.image} alt="item.name" />
-               </div>
-             ))
-           }
-              
-          </div>
+      <div className='product'>
+        <img src={initialimg} alt="product1" onClick={setCarousel}/>
+          <div className='xtra'>
+          {
+            thumbnail.map((item,i)=>( 
+              <div className='xtra-deets' >
+                <img  key={i}  onClick={()=>{image(item.image);setTab(i)}} src={item.image} alt="item.name" />
+              </div>
+            ))
+          }
+            
         </div>
+      </div>
         
         
 
@@ -80,7 +80,7 @@ const Collection = ({toggle,setToggle,count}) => {
             
             <DiscountPrice title={title} setInitialimg={setInitialimg} toggle={toggle} setToggle={setToggle}/>
            
-            </div>
+        </div>
            
      
     </div>
