@@ -7,17 +7,42 @@ import Mencollection from '../pages/Mencollection'
 import Womencollection from '../pages/Womencollection';
 import avatar from "../assets/img/avatar.png"
 import cart from "../assets/img/cart.svg"
+import { Link } from "react-router-dom";
 
 
 const Header =({selectedAsset,setSelectedAsset})=>{
-    const tabs =["collections","men","women","About","contact"]
-    const [tab,setCurrentTab] =useState("collections")
+    const tabs =[
+        {
+            to: '/collection',
+            name: 'collection'
+        },
+        {
+            
+            to: '/men',
+            name: 'men'
+        },
+        {
+          
+            to: '/women',
+            name: 'women'
+        },
+        {
+          
+            to: '/About',
+            name: 'About'
+        },
+        {
+          
+            to: '/Contact',
+            name: 'contact'
+        },
+    ]
+    const [tab,setCurrentTab] =useState("collection")
     const [activeTab, setActiveTab] = useState(0);
     const [toggle,setToggle] =useState(false)
     const [width,setWidth] =useState(window.innerWidth)
 
 
-   
     
   const showTab=(category)=>{
     
@@ -56,27 +81,29 @@ return(
             
                
                 <div className ="tabs" id="dropdown">
-                
+                    
                     {toggle ? tabs.map((category,i)=>(
                         <ul>
-                            <li key={i} className={activeTab === i ? "btn-case active" : "btn-case"} 
+                           <Link li key={i} className={activeTab === i ? "btn-case active" : "btn-case"} to={category.to}
                          onMouseClick={()=>{
-                          showTab(category)
+                          showTab(category.name)
                          setActiveTab(i)
-                        }}>{category}</li>
+                        }}>{category.name}</Link>
                         </ul>
                     
                     )): width>=601 && tabs.map((category,i)=>(
                         <ul>
-                            <li key={i} className={activeTab === i ? "btn-case active" : "btn-case"} 
+                        <Link li key={i} className={activeTab === i ? "btn-case active" : "btn-case"} to={category.to}
                                 onClick={()=>{
-                                showTab(category)
+                                showTab(category.name)
                                 setActiveTab(i)
-                        }}>{category}</li>
+                        }}>{category.name}</Link> 
                         </ul>
                     
                     ))
-                    }
+                    } 
+                  
+                    
                    
                     
                     
@@ -88,8 +115,8 @@ return(
 
             <div className="checkout">
                 <div>
-                    <img src={cart} alt="avatar" />
-                
+                <img src={cart} alt="avatar" />
+
                 </div> 
                 <div className="profile-photo">
                    <img src={avatar} alt="avatar" />

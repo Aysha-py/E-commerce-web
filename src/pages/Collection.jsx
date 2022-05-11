@@ -10,7 +10,7 @@ import DiscountPrice from '../components/DiscountPrice'
 
 
 const Collection = ({toggle,setToggle,count}) => {
-  console.log(count)
+
   const[initialimg,setInitialimg]=useState(product1)
   const[title,setTitle] =useState("FALL LIMITED EDITION SNEAKERS")
   const[tab,setTab]=useState(0) 

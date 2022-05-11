@@ -20,7 +20,7 @@ function App() {
         <Route path="/collection" element={<Collection setSelectedAsset={setSelectedAsset } selectedAsset={selectedAsset} exact/>}/>
         <Route path="/men" element={<Mencollection/>}/>
         <Route path="/women" element={<Womencollection/>}/>
-        <Route path="/checkout" element={<CheckoutBtn setSelectedAsset={setSelectedAsset} selectedAsset={selectedAsset} exact/>}/>
+        <Route path="/checkout" element={<CheckoutBtn setSelectedAsset={setSelectedAsset} selectedAsset={selectedAsset} />}/>
       </Routes>
     
     </Router>
