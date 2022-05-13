@@ -14,21 +14,7 @@ hr{
     margin-top: 0px;
     background-color: rgb(218, 207, 207);
 }
-#dropdown li:after {
-    content: "";
-    position: absolute;
-    background-color: #c00;
-    height: 2px;
-    width: 0%;
-    transform: translateX(-50%);
-    left: 50%;
-    bottom: 0;
-    transition: .35s ease;
-}
 
-#dropdown li:hover:after {
-    width: 100%;
-}
 #container .Grid{
     display: flex;
     
@@ -53,17 +39,6 @@ hr{
 #container .tabs{
     display: flex; 
 }
-#container .tabs li{
-    width: 50px;
-    text-align: center;
-}
-#container .tabs li:hover{
-    border-bottom: 1px solid orangered;
-    transition: border 2s;
-    padding: 2px;
-    transition-timing-function: ease-out;
-   
-}
 
 #container .tabs button{
     border:none;
@@ -74,15 +49,14 @@ hr{
 
 #container .tabs ul{
     list-style: none;
-    margin: 2rem;
+    margin: 2rem 0;
     font-size: 0.78rem;
-  
 }
 
 
 #container .checkout{
     display: flex;
-    margin: auto;
+    margin: auto 0;
     
 }
 .profile-photo{
@@ -124,10 +98,12 @@ hr{
     #container .tabs{
         display: flex;
         flex-direction: column;
+        margin: 0;
     };
     
-    #container .tabs ul{
-        margin-top: 0px;   
+    #container .tabs li{
+        margin:0px;
+        
     }
      #container .tabs ul{
         margin: 20px 0px;
@@ -137,17 +113,20 @@ hr{
     
     #container .checkout{
         display: flex;
-       margin:0px;
-       position: relative;
-       top: 10px;
+        position: absolute;
+        top:20px;
+        right: 20px;
+     
     }
     #container .logo button{
         display:block;
+        padding-left: 1em;
        
     }
   
     #container .logo h2, hr{
         visibility:hidden;
     }
+    
    
 } 

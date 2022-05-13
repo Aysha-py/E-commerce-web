@@ -50,27 +50,29 @@ input:focus {
 @media only screen and (max-width: 600px){
     .discount{
         display: flex;
-        justify-content: space-between;
-        
-    }
-    .addbtn{
-        display: flex;
-        flex-direction: column;
-    
+        justify-content: space-between; 
     }
     .add{
         display: flex;
-        padding: 0.7em;
+        padding: 0.7em 0;
+        width: 80%;
+        margin: 0;
+
     }
     #discountprice .checkout{
-        width: 100%;
+        width:80%;
+        
     }
-    #discountprice h4{
-        margin-left: -25px;
-    }
+  
     #discountprice .discountedprice{
         margin-left: -40px;
         margin-top: 2px;
+    }
+    
+    #discountprice .addbtn{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
     
    

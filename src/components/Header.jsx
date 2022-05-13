@@ -14,7 +14,7 @@ const Header =({selectedAsset,setSelectedAsset})=>{
     const tabs =[
         {
             to: '/collection',
-            name: 'collection'
+            name: 'collections'
         },
         {
             
@@ -84,28 +84,24 @@ return(
                     
                     {toggle ? tabs.map((category,i)=>(
                         <ul>
-                           <Link li key={i} className={activeTab === i ? "btn-case active" : "btn-case"} to={category.to}
+                           <li key={i} className={activeTab === i ? "btn-case active" : "btn-case"} 
                          onMouseClick={()=>{
                           showTab(category.name)
                          setActiveTab(i)
-                        }}>{category.name}</Link>
+                        }}>{category.name}</li>
                         </ul>
                     
                     )): width>=601 && tabs.map((category,i)=>(
                         <ul>
-                        <Link li key={i} className={activeTab === i ? "btn-case active" : "btn-case"} to={category.to}
+                        <li key={i} className={activeTab === i ? "btn-case active" : "btn-case"} 
                                 onClick={()=>{
                                 showTab(category.name)
                                 setActiveTab(i)
-                        }}>{category.name}</Link> 
+                        }}>{category.name}</li> 
                         </ul>
                     
                     ))
                     } 
-                  
-                    
-                   
-                    
                     
                 </div>
                 
@@ -127,11 +123,6 @@ return(
             
         </div>
         <hr/>
-
-            {tab  === "collections" && <Collection toggle={toggle} setToggle={setToggle}/>}
-            {tab  === "men" && <Mencollection selectedAsset={selectedAsset} />}
-            {tab  === "women" && <Womencollection />}
-            
     </div>
    
                     
