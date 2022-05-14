@@ -47,24 +47,32 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
  
     <div id='checkoutIcon'>
         
-      <Button style={{color:"white"}} startIcon={<AddShoppingCartIcon size={40}  onClick={handleShow}/> }></Button >
-        
-      <h6 style={{display:"inline", color:"white"}}>Add To Cart</h6>
-      {spin&&<Spinner animation="border" />}
+    {spin ?  <Spinner animation="border" />
+      :
+    <>
+    <Button style={{color:"white"}} startIcon={<AddShoppingCartIcon size={40}  onClick={handleShow}/> }></Button >
+    <h6 style={{display:"inline", color:"white"}}>Add To Cart</h6>
+    </>
+     
+    }
+      
+      
     </div>
     <form className='for'>
     
       {show && count!==0 && <div className='checkoutzz'>
         <h2>Cart</h2>
+        
       <div className='checkout-details'> 
           <img src={setInitialimg} alt="" />
           
           <div className='checkout-total'>
             <h3>{title}</h3>
           <div className='total'>
-            <h3>{`$${discountedprice} X`} {count}</h3>
+            <h3>{`$${discountedprice}.00 X`} {count}</h3>
+            <h3 className='cashout-price' style={{fontWeight:"bolder"}}>{`$${discountedprice * count}.00`}</h3>
             <div className='trash'>
-              <h3>{`$${discountedprice * count}.`}</h3>
+              
               <FaRegTrashAlt size={15} onClick={deleteItem}/>
             </div>
             

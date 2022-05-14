@@ -11,6 +11,8 @@ html{
 hr{
     border: 0;
     height: 1px;
+    width: 100%;
+    margin-left: -12rem;
     margin-top: 0px;
     background-color: rgb(218, 207, 207);
 }
@@ -52,11 +54,16 @@ hr{
     margin: 2rem 0;
     font-size: 0.78rem;
 }
+.tabs li:hover{
+ border-bottom: 2px solid orangered;
+
+}
 
 
 #container .checkout{
     display: flex;
     margin: auto 0;
+    z-index:99.99;
     
 }
 .profile-photo{

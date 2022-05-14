@@ -44,7 +44,7 @@ const Collection = ({toggle,setToggle,count}) => {
  const image =(item)=>{ 
   setInitialimg(item)
  }
- 
+
 
  
 
@@ -60,7 +60,7 @@ const Collection = ({toggle,setToggle,count}) => {
           {
             thumbnail.map((item,i)=>( 
               <div className='xtra-deets' >
-                <img  key={i}  onClick={()=>{image(item.image);setTab(i)}} src={item.image} alt="item.name" />
+                <img  key={i}  onClick={()=>{image(item.image);setTab(i);}} src={item.image} alt="item.name" />
               </div>
             ))
           }

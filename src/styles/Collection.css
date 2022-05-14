@@ -31,15 +31,18 @@ html{
 
 #product-info .Description h1{ 
     line-height: 3rem;
+    
 }
 #product-info .Description p{
     font-size: 1rem;
+   
     
 }
 #product-info .Description{
   margin: auto;
   max-width: 500px;
   margin-left: -5rem;  
+
 }
 @media only screen and (max-width: 600px) {
     #product-info{
