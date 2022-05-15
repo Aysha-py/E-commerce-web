@@ -55,12 +55,11 @@ input:focus {
     .add{
         display: flex;
         padding: 0.7em 0;
-        width: 80%;
         margin: 0;
 
     }
     #discountprice .checkout{
-        width:80%;
+        width:100%;
         
     }
   
@@ -72,9 +71,15 @@ input:focus {
     #discountprice .addbtn{
         display: flex;
         flex-direction: column;
-        width: 100%;
+   
     }
-    
+    #discountprice .addbtn .add{
+        margin: 0;
+    }
+    #discountprice .dp{
+       
+        margin-top: 0;
+    }
    
   
  

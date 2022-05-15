@@ -22,16 +22,15 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
           setToggle(false)
           
         }
-        else if(show && width<=600){
-          setToggle(true)
-          setShow(true)
-            document.getElementById("dropdown").style.display  = 'none';
-            console.log("hey")
+        else if(!show && width<=600){
+          setToggle()
+        
+          document.getElementById("dropdown").style.display  ='none';
+          console.log("hey")
              
         }
         else{
-          setShow(false)
-         
+          console.log("redo")
         }
     }
 
