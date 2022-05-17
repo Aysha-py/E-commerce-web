@@ -9,6 +9,7 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
 
     const [show,setShow]= useState(false)
     const[spin,setSPin] =useState(false)
+    
 
     let width = window.innerWidth
     console.log(width)
@@ -22,16 +23,17 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
           setToggle(false)
           
         }
-        else if(!show && width<=600){
-          setToggle()
-        
+        else if(show === true && width<=600){
+          setSPin(false)
+          setShow(false)
           document.getElementById("dropdown").style.display  ='none';
-          console.log("hey")
-             
+          console.log("hey") 
         }
         else{
-          console.log("redo")
+          setToggle(false)
         }
+       
+        
     }
 
   
@@ -60,6 +62,7 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
     <form className='for'>
     
       {show && count!==0 && <div className='checkoutzz'>
+        <div className='hero'>{count}</div>
         <h2>Cart</h2>
         
       <div className='checkout-details'> 

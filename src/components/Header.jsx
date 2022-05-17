@@ -69,6 +69,8 @@ const Header =({selectedAsset,setSelectedAsset})=>{
         setCurrentTab("collections")   
     }
 
+    
+
 return(
  
     <div>
@@ -119,7 +121,8 @@ return(
                 </div> 
                    
             </div>
-            
+
+            {tabs === "collections"&& <Collection/>}
             
         </div>
         <hr/>
