@@ -1,16 +1,16 @@
 import React,{useState,useEffect} from "react";
 import Collection from "../pages/Collection";
-import {FaCartArrowDown} from 'react-icons/fa';
 import {FaBars} from 'react-icons/fa';
 import {FaRegWindowClose} from 'react-icons/fa';
 import Mencollection from '../pages/Mencollection'
 import Womencollection from '../pages/Womencollection';
 import avatar from "../assets/img/avatar.png"
 import cart from "../assets/img/cart.svg"
-import { Link } from "react-router-dom";
 
 
-const Header =({selectedAsset,setSelectedAsset})=>{
+const Header =({setToggleBtn,toggleBtn,count,setCount})=>{
+
+  
     const tabs =[
         {
             to: '/collection',
@@ -39,15 +39,19 @@ const Header =({selectedAsset,setSelectedAsset})=>{
     ]
     const [tab,setCurrentTab] =useState("collection")
     const [activeTab, setActiveTab] = useState(0);
-    const [toggle,setToggle] =useState(false)
-    const [width,setWidth] =useState(window.innerWidth)
-
-
+    const [toggle,setToggle] =useState(false);
+    const [result,setResult] =useState('collections' );
+    const [width,setWidth] = useState(window.innerWidth)
     
+
+        
+      
+      
+
   const showTab=(category)=>{
     
         setCurrentTab(category)
-       console.log(category)
+        setResult(category)
     }
     const handleToggle=()=>{
         
@@ -69,7 +73,14 @@ const Header =({selectedAsset,setSelectedAsset})=>{
         setCurrentTab("collections")   
     }
 
-    
+    const quantity =localStorage.getItem("count")
+    console.log(quantity)
+    const savedQuantity = JSON.parse(quantity)
+    console.log(savedQuantity)
+    if (savedQuantity){
+        setCount(savedQuantity)
+    }
+
 
 return(
  
@@ -77,7 +88,7 @@ return(
         <div id="container">
             <div className ="Grid">
                 <div className ="logo"  >
-                   <button id="logo-btn"  onClick={handleToggle}>{toggle? <FaRegWindowClose  size={30}/>:<FaBars size={30}/>}</button>
+                   <button id="logo-btn" disabled={toggleBtn}  onClick={handleToggle}>{toggle? <FaRegWindowClose  size={30}/>:<FaBars size={30}/>}</button>
                     <h2 onClick={move}>Sneakers</h2> 
                 </div>
             
@@ -112,20 +123,25 @@ return(
 
 
             <div className="checkout">
-                <div>
-                <img src={cart} alt="avatar" />
-
+                <div className="checkout-counter">
+                    <img src={cart} alt="avatar" />
+                    <div className="hero">{quantity}</div>
                 </div> 
                 <div className="profile-photo">
                    <img src={avatar} alt="avatar" />
                 </div> 
+              
                    
             </div>
 
-            {tabs === "collections"&& <Collection/>}
+           
             
         </div>
         <hr/>
+        {result === "collections" && <Collection setToggleBtn={setToggleBtn} toggleBtn={toggleBtn}/>}
+        {result === "men" && <Mencollection/>}
+        {result === "women" && <Womencollection/>}
+        {result === "contact" && "hhhhhhhhhhhhh"}
     </div>
    
                     

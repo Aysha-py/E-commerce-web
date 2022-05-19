@@ -70,19 +70,7 @@ Button:focus{
     background: orangered;
     border-radius: 10px;
 }
-.hero{
-    border: 1px solid;
-    height:25px;
-    width: 30px;
-    border-radius: 20px;
-    text-align: center;
-    position: absolute;
-    top: -45px;
-    left: 73px;
-    background-color: orangered;
-    color:white;
-   
-}
+
 
 @media only screen and (max-width: 600px) {
     .checkoutzz{

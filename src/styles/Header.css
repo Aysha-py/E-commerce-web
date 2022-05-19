@@ -12,7 +12,6 @@ hr{
     border: 0;
     height: 1px;
     width: 100%;
-    margin-left: -10rem;
     margin-top: 0px;
     background-color: rgb(218, 207, 207);
 }
@@ -40,6 +39,8 @@ hr{
 }
 #container .tabs{
     display: flex; 
+   
+    
 }
 
 #container .tabs button{
@@ -57,6 +58,9 @@ hr{
 .tabs li:hover{
  border-bottom: 2px solid orangered;
 
+}
+#container .tabs li{
+   margin-left: 2rem;
 }
 
 
@@ -93,6 +97,22 @@ hr{
     border-radius: 60px;
     text-align: center;
     color: orangered;
+}
+.checkout-counter{
+    display: flex;
+}
+.hero{
+    border: 1px solid;
+    height:25px;
+    width: 40px;
+    margin-top: -12px;
+    margin-right: -20px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: orangered;
+    color:white;
+    
+   
 }
 
 @media only screen and (max-width: 600px) { 

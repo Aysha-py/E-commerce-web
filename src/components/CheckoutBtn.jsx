@@ -1,57 +1,65 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect} from 'react' 
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Button from '@mui/material/Button';
 import { FaRegTrashAlt} from "react-icons/fa";
 import { Spinner } from 'react-bootstrap';
 
 
-const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,setToggle}) => {
+const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,setToggleBtn,toggleBtn}) => {
 
     const [show,setShow]= useState(false)
     const[spin,setSPin] =useState(false)
     
+    
 
-    let width = window.innerWidth
-    console.log(width)
+    // let width = window.innerWidth
+  
+ 
+     
     const handleShow=()=>{
         if (!show) {
           setSPin(true)
           setTimeout(() => {
             setShow(true)
-            setSPin(false)
+            setSPin(false) 
+          setToggleBtn(true)
           }, 3000)
-          setToggle(false)
           
-        }
-        else if(show === true && width<=600){
-          setSPin(false)
-          setShow(false)
-          document.getElementById("dropdown").style.display  ='none';
-          console.log("hey") 
-        }
-        else{
-          setToggle(false)
-        }
-       
-        
-    }
+        }   
 
+    }
+    
+    
+
+    const handleHide=()=>{
+      setShow(false)
+      setToggleBtn(false)
+      setCount(0)
+    }
   
     const deleteItem=()=>{
       setCount(count-1)
 
     }
+
+    useEffect(()=>{
+      const json =JSON.stringify(count)
+      localStorage.setItem("count",json)
+  },[count])
+
+
+    
   
 
   return (
     <>
  
-    <div id='checkoutIcon'>
+    <div id='checkoutIcon' onClick={handleShow}>
         
     {spin ?  <Spinner animation="border" />
       :
     <>
-    <Button style={{color:"white"}} startIcon={<AddShoppingCartIcon size={40}  onClick={handleShow}/> }></Button >
+    <Button style={{color:"white"}} disabled={toggleBtn} startIcon={<AddShoppingCartIcon size={40}  /> }></Button >
     <h6 style={{display:"inline", color:"white"}}>Add To Cart</h6>
     </>
      
@@ -62,7 +70,7 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
     <form className='for'>
     
       {show && count!==0 && <div className='checkoutzz'>
-        <div className='hero'>{count}</div>
+        
         <h2>Cart</h2>
         
       <div className='checkout-details'> 
@@ -81,7 +89,7 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,toggle,
           </div>
           
         </div>
-        <button type='submit'>Checkout</button>
+        <button onClick={handleHide}>Checkout</button>
       </div>
   
 </div>

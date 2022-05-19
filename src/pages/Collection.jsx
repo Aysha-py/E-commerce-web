@@ -9,8 +9,9 @@ import DiscountPrice from '../components/DiscountPrice'
 
 
 
-const Collection = ({toggle,setToggle,count}) => {
+const Collection = ({toggleBtn,setToggleBtn,count,setCount}) => {
 
+  
   const[initialimg,setInitialimg]=useState(product1)
   const[title,setTitle] =useState("FALL LIMITED EDITION SNEAKERS")
   const[tab,setTab]=useState(0) 
@@ -39,13 +40,15 @@ const Collection = ({toggle,setToggle,count}) => {
     },
 ]
 
+ 
+
 // setImage(...thumbnail)
 
  const image =(item)=>{ 
   setInitialimg(item)
  }
 
-
+ 
  
 
   return (
@@ -78,7 +81,7 @@ const Collection = ({toggle,setToggle,count}) => {
               can offer
             </p>
             
-            <DiscountPrice title={title} setInitialimg={setInitialimg} toggle={toggle} setToggle={setToggle}/>
+            <DiscountPrice   title={title} setInitialimg={setInitialimg} toggleBtn={toggleBtn} setToggleBtn={setToggleBtn} count={count} setCount={setCount}/>
            
         </div>
            

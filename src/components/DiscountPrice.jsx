@@ -7,7 +7,7 @@ import CheckoutBtn from './CheckoutBtn';
 
 
 
-const DiscountPrice = ({title,setInitialimg,toggle,setToggle}) => {
+const DiscountPrice = ({title,setInitialimg,setToggleBtn,toggleBtn,setInitiaCount}) => {
   
  
   const [originalprice,setOriginalPrice] = useState(250)
@@ -32,7 +32,7 @@ const DiscountPrice = ({title,setInitialimg,toggle,setToggle}) => {
   }
   const decreament=()=>{
     setCount(count-1) 
-    if (count===0){
+    if (count === 0){
       setCount(0)
     }
   }
@@ -66,8 +66,8 @@ const DiscountPrice = ({title,setInitialimg,toggle,setToggle}) => {
           </div>
           
           <div className='checkout'>
-            <CheckoutBtn count={count} discountedprice={discountedprice} 
-                title={title} setInitialimg={setInitialimg} setCount={setCount} toggle={toggle} setToggle={setToggle}/>
+            <CheckoutBtn  count={count} discountedprice={discountedprice} 
+                title={title} setInitialimg={setInitialimg} setCount={setCount} setToggleBtn={setToggleBtn} toggleBtn={toggleBtn}/>
           </div>
         </div>
       </div>
