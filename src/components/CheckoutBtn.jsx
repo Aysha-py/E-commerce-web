@@ -35,6 +35,7 @@ const CheckoutBtn = ({count,discountedprice,title,setInitialimg,setCount,setTogg
       setShow(false)
       setToggleBtn(false)
       setCount(0)
+
     }
   
     const deleteItem=()=>{

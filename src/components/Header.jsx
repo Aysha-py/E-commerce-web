@@ -74,12 +74,17 @@ const Header =({setToggleBtn,toggleBtn,count,setCount})=>{
     }
 
     const quantity =localStorage.getItem("count")
-    console.log(quantity)
-    const savedQuantity = JSON.parse(quantity)
-    console.log(savedQuantity)
-    if (savedQuantity){
-        setCount(savedQuantity)
-    }
+
+   
+
+
+    // console.log(quantity)
+    // const savedQuantity = JSON.parse(quantity)
+    // console.log(savedQuantity)
+    // if (savedQuantity){
+    //     setCount(savedQuantity)
+    // }
+
 
 
 return(

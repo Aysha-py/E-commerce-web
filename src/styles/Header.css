@@ -61,7 +61,10 @@ hr{
 }
 #container .tabs li{
    margin-left: 2rem;
+   height: 7.5vh;
+   margin-bottom: -4rem;
 }
+
 
 
 #container .checkout{
