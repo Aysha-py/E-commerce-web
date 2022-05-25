@@ -5,7 +5,8 @@ import image2 from "../assets/img/image2.jpg"
 import image3 from "../assets/img/image3.jpg"
 import image4 from "../assets/img/image4.jpg"
 import DiscountPrice from '../components/DiscountPrice'
-
+import 'photoswipe/dist/photoswipe.css'
+import { Gallery, Item } from 'react-photoswipe-gallery'
 
 
 
@@ -60,13 +61,69 @@ const Collection = ({toggleBtn,setToggleBtn,count,setCount}) => {
       <div className='product'>
         <img src={initialimg} alt="product1" onClick={setCarousel}/>
           <div className='xtra'>
-          {
-            thumbnail.map((item,i)=>( 
-              <div className='xtra-deets' >
-                <img  key={i}  onClick={()=>{image(item.image);setTab(i);}} src={item.image} alt="item.name" />
-              </div>
-            ))
-          }
+            <Gallery >
+              <Item 
+                original={image1}
+                thumbnail={image1}
+                width="400"
+                height="400"
+              >
+                {({ ref, open }) => (
+                  <img 
+                    ref={ref}
+                    onClick={open}
+                    src={image1}
+                    alt='image1'
+                  />
+                )}
+              </Item>
+              <Item 
+                original={image2}
+                thumbnail={image2}
+                width="400"
+                height="400"
+              >
+                {({ ref, open }) => (
+                  <img 
+                    ref={ref}
+                    onClick={open}
+                    src={image2}
+                    alt='image2'
+                  />
+                )}
+              </Item>
+              <Item 
+              original={image3}
+              thumbnail={image3}
+              width="400"
+              height="400"
+            >
+              {({ ref, open }) => (
+                <img 
+                  ref={ref}
+                  onClick={open}
+                  src={image3}
+                  alt='image3'
+                />
+              )}
+            </Item>
+            <Item 
+            original={image4}
+            thumbnail={image4}
+            width="400"
+            height="400"
+          >
+            {({ ref, open }) => (
+              <img 
+                ref={ref}
+                onClick={open}
+                src={image4}
+                alt='image4'
+              />
+            )}
+          </Item>
+          </Gallery>
+             
             
         </div>
       </div>
