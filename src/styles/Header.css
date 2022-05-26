@@ -126,11 +126,7 @@ hr{
         display: flex;
         flex-direction: column;
     }
-    #container .tabs{
-        display: flex;
-        flex-direction: column;
-    };
-    
+   
     #container .tabs li{
         margin:0px;
         

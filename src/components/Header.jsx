@@ -6,7 +6,7 @@ import Mencollection from '../pages/Mencollection'
 import Womencollection from '../pages/Womencollection';
 import avatar from "../assets/img/avatar.png"
 import cart from "../assets/img/cart.svg"
-
+ 
 
 const Header =({setToggleBtn,toggleBtn,count,setCount})=>{
 
